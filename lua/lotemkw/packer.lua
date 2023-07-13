@@ -21,6 +21,8 @@ return require('packer').startup(function(use)
 		as = 'rose-pine',
 		requires = { {'lukas-reineke/indent-blankline.nvim'} },
 	})
+    use('olivercederborg/poimandres.nvim')
+    use('folke/tokyonight.nvim')
 
     -- improve syntax highlighting
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -45,6 +47,7 @@ return require('packer').startup(function(use)
 
             -- Autocompletion
             {'hrsh7th/nvim-cmp'},         -- Required
+
             {'hrsh7th/cmp-nvim-lsp'},     -- Required
             {'hrsh7th/cmp-buffer'},       -- Optional
             {'hrsh7th/cmp-path'},         -- Optional
@@ -61,4 +64,5 @@ return require('packer').startup(function(use)
 
     -- improve code formatting
     use('gpanders/editorconfig.nvim')
+    use('jose-elias-alvarez/null-ls.nvim')
 end)

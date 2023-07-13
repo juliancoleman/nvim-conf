@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/Users/julain/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/Users/julain/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/julain/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -179,6 +184,11 @@ _G.packer_plugins = {
     path = "/Users/julain/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["poimandres.nvim"] = {
+    loaded = true,
+    path = "/Users/julain/.local/share/nvim/site/pack/packer/start/poimandres.nvim",
+    url = "https://github.com/olivercederborg/poimandres.nvim"
+  },
   ["rose-pine"] = {
     loaded = true,
     path = "/Users/julain/.local/share/nvim/site/pack/packer/start/rose-pine",
@@ -188,6 +198,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/julain/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/Users/julain/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   },
   undotree = {
     loaded = true,
