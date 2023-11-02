@@ -1,4 +1,4 @@
 return {
     'nvim-treesitter/playground',
-    lazy = true,
+    ft = { "lua", "rs", "tsx", "ts", "js", "jsx", "go", "css", "html", "json" },
 }
