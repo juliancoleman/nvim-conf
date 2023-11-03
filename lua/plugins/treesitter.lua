@@ -1,6 +1,5 @@
 return {
     'nvim-treesitter/nvim-treesitter',
-    ft = { "lua", "rs", "tsx", "ts", "js", "jsx", "go", "css", "html", "json" },
     config = function ()
         require('nvim-treesitter.configs').setup({
             -- A list of parser names, or "all" (the five listed parsers should always be installed)
