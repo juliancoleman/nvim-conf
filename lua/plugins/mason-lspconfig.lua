@@ -20,7 +20,26 @@ return {
         require('mason-lspconfig').setup_handlers({
             function(server_name)
                 lspconfig[server_name].setup({
-                    capabilities = lsp_capabilities
+                    capabilities = lsp_capabilities,
+                    on_attach = function ()
+                        local _border = "single"
+
+                        vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+                            vim.lsp.handlers.hover, {
+                                border = _border
+                            }
+                        )
+
+                        vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
+                            vim.lsp.handlers.signature_help, {
+                                border = _border
+                            }
+                        )
+
+                        vim.diagnostic.config{
+                            float={border=_border}
+                        }
+                    end
                 })
             end
         })

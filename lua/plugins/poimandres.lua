@@ -1,10 +1,12 @@
 return {
     'olivercederborg/poimandres.nvim',
-    enabled = false,
+    -- enabled = false,
     config = function ()
         local p = require("poimandres.palette")
 
         -- cmp menu colors
+        vim.cmd.colorscheme("poimandres")
+
         vim.api.nvim_set_hl(0, 'CmpItemAbbrDeprecated', { bg='NONE', strikethrough=true, fg=p.blueGray1 })
         vim.api.nvim_set_hl(0, 'CmpItemAbbrMatch', { bg='NONE', fg=p.teal1 })
         vim.api.nvim_set_hl(0, 'CmpItemAbbrMatchFuzzy', { link='CmpIntemAbbrMatch' })
@@ -21,6 +23,9 @@ return {
         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
         vim.opt.background = "dark"
 
-        vim.cmd.colorscheme("poimandres")
+        vim.api.nvim_set_hl(0, "FloatBorder", { fg = p.blueGray1 })
+        vim.api.nvim_set_hl(0, "TelescopePromptBorder", { bg = "none", fg=p.blueGray1 })
+        vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "none", fg=p.blueGray1 })
+
     end
 }

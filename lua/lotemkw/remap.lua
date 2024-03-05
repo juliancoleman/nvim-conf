@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", ':Oil --float<CR>')
 
 -- enable VSCode-like alt-arrow-key navigation using the J and K keys
 -- when in visual mode
@@ -38,7 +38,7 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 vim.keymap.set("n", "Q", "<nop>")
 
 -- quickly replace all instances of the word the cursor is in. For more
--- granular symbol renaming, use `<leader>rn`, provided in /after/plugin/lsp.lua
+-- granular symbol renaming, use `<leader>rs`, provided in /after/plugin/lspconfig.lua
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- quickly shoutout a file
