@@ -17,6 +17,8 @@ return {
                     end
                 }
 
+                -- optionally look into using Telescope here so that we can see
+                -- results in a float instead of in the quickfix list
                 vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts_zz)
                 vim.keymap.set("n", "gf", vim.lsp.buf.format, opts)
                 vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)

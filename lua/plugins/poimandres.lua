@@ -23,6 +23,7 @@ return {
         vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
         vim.opt.background = "dark"
 
+        vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = p.background2 })
         vim.api.nvim_set_hl(0, "FloatBorder", { fg = p.blueGray1 })
         vim.api.nvim_set_hl(0, "TelescopePromptBorder", { bg = "none", fg=p.blueGray1 })
         vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "none", fg=p.blueGray1 })

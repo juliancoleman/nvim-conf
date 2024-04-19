@@ -7,6 +7,12 @@ return {
     },
     config = function()
         require("oil").setup({
+            float = {
+                padding = 2,
+                max_width = 100,
+                max_height = 35,
+
+            },
             view_options = {
                 show_hidden = true,
                 is_always_hidden = function(name, bufnr)
