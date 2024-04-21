@@ -7,6 +7,7 @@ return {
     },
     config = function()
         require("oil").setup({
+            default_file_explorer = true,
             float = {
                 padding = 2,
                 max_width = 100,
