@@ -18,7 +18,7 @@ return {
                 show_hidden = true,
                 is_always_hidden = function(name, bufnr)
                     -- add files here that should be hidden always, such as .DS_Store
-                    return false
+                    return name == "./" or name == ".."
                 end
             }
         })
