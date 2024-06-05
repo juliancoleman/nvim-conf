@@ -16,6 +16,7 @@ return {
       ---@diagnostic disable-next-line
       statusline.section_fileinfo = function ()
          local filetype = vim.bo.filetype
+
          -- don't show anything if we can't detect file type or not inside a "normal buffer"
          if (filetype == '') or vim.bo.buftype ~= '' then
             return "%r"
