@@ -29,6 +29,7 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
+vim.opt.statuscolumn = "%=%{v:relnum?v:relnum:v:lnum} %s" -- move gitsigns to the right of the line number
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50

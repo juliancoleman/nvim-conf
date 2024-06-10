@@ -1,9 +1,13 @@
 return {
     'nvim-treesitter/nvim-treesitter',
     config = function ()
+        ---@diagnostic disable-next-line
         require('nvim-treesitter.configs').setup({
             -- A list of parser names, or "all" (the five listed parsers should always be installed)
             ensure_installed = { "vimdoc", "javascript", "typescript", "tsx", "c", "lua", "rust" },
+
+            -- List of parsers to ignore installing (or "all")
+            ignore_install = {},
 
             -- Install parsers synchronously (only applied to `ensure_installed`)
             sync_install = false,

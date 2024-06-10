@@ -4,12 +4,12 @@ return {
         { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
         'williamboman/mason-lspconfig.nvim',
         'WhoIsSethDaniel/mason-tool-installer.nvim',
-        { 'folke/neodev.nvim', opts = {} },
+        { 'folke/neodev.nvim',       opts = {} },
     },
-    config = function ()
+    config = function()
         vim.api.nvim_create_autocmd('LspAttach', {
             desc = "LSP actions",
-            callback = function (ev)
+            callback = function(ev)
                 local opts = {
                     buffer = ev.buf,
                     remap = false

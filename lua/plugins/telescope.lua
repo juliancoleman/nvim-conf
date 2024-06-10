@@ -19,7 +19,6 @@ return {
         { "<leader>lg", "<cmd>Telescope live_grep<cr>", desc = "Telescope" },
         { "<leader>gf", "<cmd>Telescope git_files<cr>", desc = "Telescope" },
         { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Telescope" },
-        { "<leader>qf", "<cmd>Telescope quickfix<cr>", desc = "Telescope" },
         { "<leader>ht", "<cmd>Telescope help_tags<cr>", desc = "Telescope" },
     },
     config = function ()
