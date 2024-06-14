@@ -1,4 +1,4 @@
 return {
-    "f-person/git-blame.nvim",
-    enabled = true,
+	"f-person/git-blame.nvim",
+	enabled = true,
 }
