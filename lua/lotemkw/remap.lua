@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>pv", ':Oil --float<CR>')
+vim.keymap.set("n", "<leader>pv", ":Oil --float<CR>")
 
 -- enable VSCode-like alt-arrow-key navigation using the J and K keys
 -- when in visual mode
@@ -22,17 +22,17 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- dump the replaced contents to the void register and paste over it
-vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("x", "<leader>p", '"_dP')
 
 -- shortcut to add yanked text to system clipboard when in normal or visual
 -- mode
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>Y", "\"+Y")
+vim.keymap.set("n", "<leader>y", '"+y')
+vim.keymap.set("v", "<leader>y", '"+y')
+vim.keymap.set("n", "<leader>Y", '"+Y')
 
 -- dump the cut contents to the void register when in normal or visual mode
-vim.keymap.set("n", "<leader>d", "\"_d")
-vim.keymap.set("v", "<leader>d", "\"_d")
+vim.keymap.set("n", "<leader>d", '"_d')
+vim.keymap.set("v", "<leader>d", '"_d')
 
 -- don't ever press Q
 vim.keymap.set("n", "Q", "<nop>")
@@ -43,5 +43,5 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- quickly shoutout a file
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+	vim.cmd("so")
 end)
