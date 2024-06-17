@@ -37,5 +37,8 @@ return {
 		vim.api.nvim_set_hl(0, "FloatBorder", { fg = p.blueGray1 })
 		vim.api.nvim_set_hl(0, "TelescopePromptBorder", { bg = "none", fg = p.blueGray1 })
 		vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "none", fg = p.blueGray1 })
+
+		-- Some visual fixes for mini.statusline
+		vim.api.nvim_set_hl(0, "MiniStatuslineModeInsert", { fg = p.background2, bg = p.pink3 }) -- I want this to appear more like an error state because I tend to try to run commands in insert mode a lot...
 	end,
 }

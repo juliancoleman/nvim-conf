@@ -9,6 +9,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
+-- Auto-format documents based on their attached
+-- LSP clients
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*",
 	callback = function(args)
