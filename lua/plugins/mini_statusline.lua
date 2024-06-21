@@ -26,7 +26,8 @@ return {
 				"%<", -- Mark general truncate point
 				{ hl = "MiniStatuslineFilename", strings = { diagnostics, filename } },
 				"%=", -- End left alignment
-				{ hl = "MiniStatuslineFileinfo", strings = { fileinfo, lsp } },
+				{ hl = "MiniStatuslineFileinfo", strings = { fileinfo } },
+				{ hl = "DiffText", strings = { lsp } },
 				{ hl = mode_hl, strings = { search, location } },
 			})
 		end
@@ -40,20 +41,33 @@ return {
 
 		---@diagnostic disable-next-line
 		statusline.section_lsp = function()
-			local attached_clients = vim.lsp.buf_get_clients(vim.api.nvim_get_current_buf())
+			local client_map = {
+				lua_ls = "Lua LSP",
+				stylua = "StyLua",
+				eslint = "ESLint",
+				tsserver = "TypeScript",
+				tailwindcss = "Tailwind",
+				prettier = "Prettier",
+			}
 
+			local attached_clients = vim.lsp.buf_get_clients(vim.api.nvim_get_current_buf())
 			local client_names = {}
 
-			for client_id, client in pairs(attached_clients) do
-				client_names[client_id] = client.name
+			for _, client in pairs(attached_clients) do
+				table.insert(client_names, client_map[client.name] or client.name)
 			end
 
-			local formatters = conform.list_formatters_for_buffer(vim.api.nvim_get_current_buf())
+			local formatters = vim.tbl_flatten(conform.list_formatters_for_buffer(vim.api.nvim_get_current_buf()))
 
-			return string.format(
-				"%s",
-				vim.inspect(vim.tbl_deep_extend("force", client_names, vim.tbl_flatten(formatters)))
-			)
+			for _, formatter in pairs(formatters) do
+				table.insert(client_names, client_map[formatter] or formatter)
+			end
+
+			if vim.tbl_count(client_names) == 0 then
+				return ""
+			end
+
+			return string.format("[ %s ]", table.concat(client_names, " | "))
 		end
 
 		---@diagnostic disable-next-line
@@ -62,7 +76,7 @@ return {
 
 			-- don't show anything if we can't detect file type or not inside a "normal buffer"
 			if (filetype == "") or vim.bo.buftype ~= "" then
-				return "%r"
+				return ""
 			end
 
 			local function get_filetype_icon()
