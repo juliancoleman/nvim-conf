@@ -75,7 +75,7 @@ return {
 			rust_analyzer = {},
 			tailwindcss = {},
 			tsserver = {},
-			prettier = {},
+			-- prettier = {},
 		}
 
 		require("mason").setup()

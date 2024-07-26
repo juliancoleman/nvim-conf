@@ -41,6 +41,7 @@ return {
 
 		---@diagnostic disable-next-line
 		statusline.section_lsp = function()
+			-- map client names into something a bit more human readable.
 			local client_map = {
 				lua_ls = "Lua LSP",
 				stylua = "StyLua",
