@@ -20,6 +20,7 @@ return {
 		{ "<leader>gf", "<cmd>Telescope git_files<cr>", desc = "Telescope" },
 		{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Telescope" },
 		{ "<leader>ht", "<cmd>Telescope help_tags<cr>", desc = "Telescope" },
+		{ "<leader>fr", "<cmd>Telescope lsp_references<cr>", desc = "Telescope" },
 	},
 	config = function()
 		require("telescope").setup({

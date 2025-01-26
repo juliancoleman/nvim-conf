@@ -3,6 +3,7 @@ return {
 	-- enabled = false,
 	lazy = false,
 	priority = 1000,
+	enabled = false,
 	config = function()
 		require("poimandres").setup({
 			-- leave this setup function empty for default config
@@ -40,5 +41,8 @@ return {
 
 		-- Some visual fixes for mini.statusline
 		vim.api.nvim_set_hl(0, "MiniStatuslineModeInsert", { fg = p.background2, bg = p.pink3 }) -- I want this to appear more like an error state because I tend to try to run commands in insert mode a lot...
+
+		-- Some visual fixes for Avante
+		vim.api.nvim_set_hl(0, "RenderMarkdownCode", { bg = p.background2 })
 	end,
 }

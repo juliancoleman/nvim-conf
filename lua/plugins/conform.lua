@@ -6,7 +6,7 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				typescript = { "prettier" },
-				typescriptreact = { { "prettierd", "prettier" } },
+				typescriptreact = { "prettier" },
 			},
 		})
 	end,
