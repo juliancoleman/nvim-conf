@@ -1,5 +1,9 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	run = ":TSUpdate",
+	dependencies = {
+		"nvim-treesitter/playground",
+	},
 	config = function()
 		---@diagnostic disable-next-line
 		require("nvim-treesitter.configs").setup({

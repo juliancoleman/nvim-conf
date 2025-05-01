@@ -26,6 +26,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
+vim.o.termguicolors = true
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
@@ -46,3 +47,10 @@ vim.g.netrw_list_hide = "^\\./$"
 
 -- Avante preferences
 vim.opt.laststatus = 3
+
+-- f-person/git-blame.nvim settings
+vim.g.gitblame_highlight_group = "GitBlame"
+vim.g.gitblame_set_extmark_options = {
+	virt_text_pos = "eol",
+	hl_mode = "combine",
+}
